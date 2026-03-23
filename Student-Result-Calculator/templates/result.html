@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Result Summary</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="result-card">
+
+<h1>📊 Result Summary</h1>
+
+<div class="result-grid">
+
+<div class="box total">
+<h3>Total Marks</h3>
+<p>{{ total }}</p>
+</div>
+
+<div class="box percent">
+<h3>Percentage</h3>
+<p>{{ percentage }}%</p>
+</div>
+
+<div class="box grade">
+<h3>Grade</h3>
+<p>{{ grade }}</p>
+</div>
+
+</div>
+
+<div class="progress-container">
+<div class="progress-bar" style="width: {{ percentage }}%"></div>
+</div>
+
+<a class="btn" href="/">🔄 Calculate Again</a>
+
+</div>
+
+</body>
+</html>
